@@ -783,7 +783,6 @@ void Plane::update_flight_mode(void)
 
     //UWAFSL START
     case UWSTABILIZE: {
-        //AFSLRefactor: Add implementation
         break;
     }
     //UWAFSL END
