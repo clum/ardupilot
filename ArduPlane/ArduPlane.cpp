@@ -783,9 +783,21 @@ void Plane::update_flight_mode(void)
 
     //UWAFSL START
     case UWSTABILIZE: {
-        nav_roll_cd = 0;
-        nav_pitch_cd = 0;
-        // throttle is passthrough
+        //Extract bank angle
+        double phi = ahrs.roll; // rad
+
+        double phi_cmd = 0;     //hold wings level
+        double phi_e = phi - phi_cmd;
+
+        //implement control law
+        double KPhi = 1.1;      //rad/rad
+        double dA = -KPhi*phi_e);
+
+        // Set RC output channels to control surface deflections
+        double pi = 3.14159;
+        double scale_factor_r2cd = 100 * 180 / pi; // scale factor to convert radians to centidegrees
+        SRV_Channels::set_output_scaled(SRV_Channel::k_aileron, -dA * scale_factor_r2cd); //centidegrees
+
         break;
     }
     //UWAFSL END
