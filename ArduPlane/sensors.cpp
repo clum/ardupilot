@@ -231,6 +231,9 @@ void Plane::update_sensor_status_flags(void)
 
     switch (control_mode) {
     case MANUAL:
+    //UWAFSL START
+    case UWSTABILIZE:
+    //UWAFSL END
         break;
 
     case ACRO:
@@ -238,9 +241,6 @@ void Plane::update_sensor_status_flags(void)
         break;
 
     case STABILIZE:
-    //UWAFSL START
-    case UWSTABILIZE:
-    //UWAFSL END
     case FLY_BY_WIRE_A:
     case AUTOTUNE:
     case QSTABILIZE:
