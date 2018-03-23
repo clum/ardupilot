@@ -139,6 +139,67 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ArduPlane\afs_plane.cpp" />
+    <ClCompile Include="ArduPlane\altitude.cpp" />
+    <ClCompile Include="ArduPlane\AP_Arming.cpp" />
+    <ClCompile Include="ArduPlane\ArduPlane.cpp" />
+    <ClCompile Include="ArduPlane\Attitude.cpp" />
+    <ClCompile Include="ArduPlane\avoidance_adsb.cpp" />
+    <ClCompile Include="ArduPlane\capabilities.cpp" />
+    <ClCompile Include="ArduPlane\commands.cpp" />
+    <ClCompile Include="ArduPlane\commands_logic.cpp" />
+    <ClCompile Include="ArduPlane\control_modes.cpp" />
+    <ClCompile Include="ArduPlane\events.cpp" />
+    <ClCompile Include="ArduPlane\failsafe.cpp" />
+    <ClCompile Include="ArduPlane\GCS_Mavlink.cpp" />
+    <ClCompile Include="ArduPlane\GCS_Plane.cpp" />
+    <ClCompile Include="ArduPlane\geofence.cpp" />
+    <ClCompile Include="ArduPlane\is_flying.cpp" />
+    <ClCompile Include="ArduPlane\Log.cpp" />
+    <ClCompile Include="ArduPlane\motor_test.cpp" />
+    <ClCompile Include="ArduPlane\navigation.cpp" />
+    <ClCompile Include="ArduPlane\parachute.cpp" />
+    <ClCompile Include="ArduPlane\Parameters.cpp" />
+    <ClCompile Include="ArduPlane\Plane.cpp" />
+    <ClCompile Include="ArduPlane\px4_mixer.cpp" />
+    <ClCompile Include="ArduPlane\quadplane.cpp" />
+    <ClCompile Include="ArduPlane\radio.cpp" />
+    <ClCompile Include="ArduPlane\sensors.cpp" />
+    <ClCompile Include="ArduPlane\servos.cpp" />
+    <ClCompile Include="ArduPlane\setup.cpp" />
+    <ClCompile Include="ArduPlane\soaring.cpp" />
+    <ClCompile Include="ArduPlane\system.cpp" />
+    <ClCompile Include="ArduPlane\tailsitter.cpp" />
+    <ClCompile Include="ArduPlane\takeoff.cpp" />
+    <ClCompile Include="ArduPlane\test.cpp" />
+    <ClCompile Include="ArduPlane\tiltrotor.cpp" />
+    <ClCompile Include="ArduPlane\tuning.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ArduPlane\APM_Config.h" />
+    <ClInclude Include="ArduPlane\AP_Arming.h" />
+    <ClInclude Include="ArduPlane\avoidance_adsb.h" />
+    <ClInclude Include="ArduPlane\config.h" />
+    <ClInclude Include="ArduPlane\defines.h" />
+    <ClInclude Include="ArduPlane\GCS_Mavlink.h" />
+    <ClInclude Include="ArduPlane\GCS_Plane.h" />
+    <ClInclude Include="ArduPlane\Parameters.h" />
+    <ClInclude Include="ArduPlane\Plane.h" />
+    <ClInclude Include="ArduPlane\quadplane.h" />
+    <ClInclude Include="ArduPlane\tuning.h" />
+    <ClInclude Include="ArduPlane\version.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ArduPlane\APM_Config.h.reference" />
+    <None Include="ArduPlane\createTags" />
+    <None Include="ArduPlane\make.inc" />
+    <None Include="ArduPlane\Makefile" />
+    <None Include="ArduPlane\Makefile.waf" />
+    <None Include="ArduPlane\Parameters.pde" />
+    <None Include="ArduPlane\wscript" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ArduPlane\release-notes.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
