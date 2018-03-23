@@ -798,6 +798,9 @@ void Plane::update_flight_mode(void)
         double scale_factor_r2cd = 100 * 180 / pi; // scale factor to convert radians to centidegrees
         SRV_Channels::set_output_scaled(SRV_Channel::k_aileron, -dA * scale_factor_r2cd); //centidegrees
 
+        //Manual control for elevator and rudder
+        SRV_Channels::set_output_scaled(SRV_Channel::k_elevator, channel_pitch->get_control_in_zero_dz());
+        steering_control.steering = steering_control.rudder = channel_rudder->get_control_in_zero_dz();
         break;
     }
     //UWAFSL END
