@@ -783,9 +783,9 @@ void Plane::update_flight_mode(void)
 
     //UWAFSL START
     case UWSTABILIZE: {
-        SRV_Channels::set_output_scaled(SRV_Channel::k_aileron, channel_roll->get_control_in_zero_dz());
-        SRV_Channels::set_output_scaled(SRV_Channel::k_elevator, channel_pitch->get_control_in_zero_dz());
-        steering_control.steering = steering_control.rudder = channel_rudder->get_control_in_zero_dz();
+        nav_roll_cd = 0;
+        nav_pitch_cd = 0;
+        // throttle is passthrough
         break;
     }
     //UWAFSL END
