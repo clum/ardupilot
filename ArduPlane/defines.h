@@ -65,7 +65,9 @@ enum FlightMode {
     QLOITER       = 19,
     QLAND         = 20,
     QRTL          = 21,
+    //UWAFSL START
     UWSTABILIZE   = 22
+    //UWAFSL END
 };
 
 enum mode_reason_t {

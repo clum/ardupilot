@@ -1,4 +1,4 @@
-/*
+﻿/*
    Lead developer: Andrew Tridgell
  
    Authors:    Doug Weibel, Jose Julio, Jordi Munoz, Jason Short, Randy Mackay, Pat Hickey, John Arne Birkeland, Olivier Adler, Amilcar Lucas, Gregory Fletcher, Paul Riseborough, Brandon Jones, Jon Challinger
@@ -780,6 +780,13 @@ void Plane::update_flight_mode(void)
         }
         break;
     }
+
+    //UWAFSL START
+    case UWSTABILIZE: {
+        //AFSLRefactor: Add implementation
+        break;
+    }
+    //UWAFSL END
         
     case INITIALISING:
         // handled elsewhere
@@ -863,6 +870,9 @@ void Plane::update_navigation()
     case QLOITER:
     case QLAND:
     case QRTL:
+    //UWAFSL START
+    case UWSTABILIZE:
+    //UWAFSL END
         // nothing to do
         break;
     }
