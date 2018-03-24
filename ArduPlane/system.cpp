@@ -830,6 +830,11 @@ void Plane::notify_flight_mode(enum FlightMode mode)
     case QRTL:
         notify.set_flight_mode_str("QRTL");
         break;
+    //UWAFSL START
+    case UWSTABILIZE:
+        notify.set_flight_mode_str("UWSTABILIZE");
+        break;
+    //UWAFSL END
     default:
         notify.set_flight_mode_str("----");
         break;
