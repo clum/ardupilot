@@ -783,26 +783,22 @@ void Plane::update_flight_mode(void)
 
     //UWAFSL START
     case UWSTABILIZE: {
-        ////Extract bank angle
-        //double phi = ahrs.roll; // rad
+        //Extract bank angle
+        double phi = ahrs.roll; // rad
 
-        //double phi_cmd = 0;     //hold wings level
-        //double phi_e = phi - phi_cmd;
+        double phi_cmd = 0;     //hold wings level
+        double phi_e = phi - phi_cmd;
 
-        ////implement control law
-        //double KPhi = 1.1;      //rad/rad
-        //double dA = -KPhi*phi_e;
+        //implement control law
+        double KPhi = 1.1;      //rad/rad
+        double dA = -KPhi*phi_e;
 
-        //// Set RC output channels to control surface deflections
-        //double pi = 3.14159;
-        //double scale_factor_r2cd = 100 * 180 / pi; // scale factor to convert radians to centidegrees
-        //SRV_Channels::set_output_scaled(SRV_Channel::k_aileron, -dA * scale_factor_r2cd); //centidegrees
+        // Set RC output channels to control surface deflections
+        double pi = 3.14159;
+        double scale_factor_r2cd = 100 * 180 / pi; // scale factor to convert radians to centidegrees
+        SRV_Channels::set_output_scaled(SRV_Channel::k_aileron, -dA * scale_factor_r2cd); //centidegrees
 
-        ////Manual control for elevator and rudder
-        //SRV_Channels::set_output_scaled(SRV_Channel::k_elevator, channel_pitch->get_control_in_zero_dz());
-        //steering_control.steering = steering_control.rudder = channel_rudder->get_control_in_zero_dz();
-
-        SRV_Channels::set_output_scaled(SRV_Channel::k_aileron, channel_roll->get_control_in_zero_dz());
+        //Manual control for elevator and rudder
         SRV_Channels::set_output_scaled(SRV_Channel::k_elevator, channel_pitch->get_control_in_zero_dz());
         steering_control.steering = steering_control.rudder = channel_rudder->get_control_in_zero_dz();
         break;
