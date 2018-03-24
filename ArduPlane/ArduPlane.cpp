@@ -790,7 +790,7 @@ void Plane::update_flight_mode(void)
         double phi_e = phi - phi_cmd;
 
         //implement control law
-        double KPhi = 0.25;      //rad/rad
+        double KPhi = 0.75;      //rad/rad
         double dA = -KPhi*phi_e;
 
         // Set RC output channels to control surface deflections
