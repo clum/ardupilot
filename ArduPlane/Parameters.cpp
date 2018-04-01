@@ -15,7 +15,7 @@ const AP_Param::Info Plane::var_info[] = {
     //UWAFSL START
     // @Param: KP_PHI
     // @DisplayName: KP for UW wing leveler.
-    // @Description: The proportional gain for the UW wing levler.
+    // @Description: The proportional gain for the UW wing leveler.
     // @User: Standard
     GSCALAR(kp_phi, "KP_PHI", 0.6),
     //UWAFSL END
