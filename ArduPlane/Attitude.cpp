@@ -363,11 +363,11 @@ void Plane::stabilize()
         return;
     }
 
-    //AFSL START
+    //UWAFSL START
     if (control_mode == UWSTABILIZE) {
         return;
     }
-    //AFSL END
+    //UWAFSL END
 
     float speed_scaler = get_speed_scaler();
 
